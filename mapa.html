@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ff6cf83fe2c9dd1ba87657c55f7a35fb {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ff6cf83fe2c9dd1ba87657c55f7a35fb" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ff6cf83fe2c9dd1ba87657c55f7a35fb = L.map(
+                "map_ff6cf83fe2c9dd1ba87657c55f7a35fb",
+                {
+                    center: [-23.542182999999998, -46.65375766666667],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c29a269019387c672ded5177805c1ac2 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c29a269019387c672ded5177805c1ac2.addTo(map_ff6cf83fe2c9dd1ba87657c55f7a35fb);
+        
+    
+            var marker_fe611c27d2f7665aa106efed7bff7562 = L.marker(
+                [-23.534377, -46.654322],
+                {
+}
+            ).addTo(map_ff6cf83fe2c9dd1ba87657c55f7a35fb);
+        
+    
+            var icon_47a2d1d6bce8004f2d470d3eb845c621 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f52ff68e8746a40f225ed30f1f1eacdc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_105bd5dfc7f5edeb4de21648f4e272cf = $(`<div id="html_105bd5dfc7f5edeb4de21648f4e272cf" style="width: 100.0%; height: 100.0%;">ANGELICA C/B</div>`)[0];
+                popup_f52ff68e8746a40f225ed30f1f1eacdc.setContent(html_105bd5dfc7f5edeb4de21648f4e272cf);
+            
+        
+
+        marker_fe611c27d2f7665aa106efed7bff7562.bindPopup(popup_f52ff68e8746a40f225ed30f1f1eacdc)
+        ;
+
+        
+    
+    
+            marker_fe611c27d2f7665aa106efed7bff7562.bindTooltip(
+                `<div>
+                     Parada de ônibus
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fe611c27d2f7665aa106efed7bff7562.setIcon(icon_47a2d1d6bce8004f2d470d3eb845c621);
+            
+    
+            var marker_4b317bffd072022f24e0885c6faa637c = L.marker(
+                [-23.551843, -46.657399],
+                {
+}
+            ).addTo(map_ff6cf83fe2c9dd1ba87657c55f7a35fb);
+        
+    
+            var icon_b9b8ed7fc0b4751fa0c708aa66fe79bd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_03d3b871301aa239685e693075dbcbd7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_84a07be869438c97d51031fde429f08e = $(`<div id="html_84a07be869438c97d51031fde429f08e" style="width: 100.0%; height: 100.0%;">PEDRO TAQUES B/C</div>`)[0];
+                popup_03d3b871301aa239685e693075dbcbd7.setContent(html_84a07be869438c97d51031fde429f08e);
+            
+        
+
+        marker_4b317bffd072022f24e0885c6faa637c.bindPopup(popup_03d3b871301aa239685e693075dbcbd7)
+        ;
+
+        
+    
+    
+            marker_4b317bffd072022f24e0885c6faa637c.bindTooltip(
+                `<div>
+                     Parada de ônibus
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4b317bffd072022f24e0885c6faa637c.setIcon(icon_b9b8ed7fc0b4751fa0c708aa66fe79bd);
+            
+    
+            var marker_b7d75574f4b60a514f626eb218f41f17 = L.marker(
+                [-23.549577, -46.653216],
+                {
+}
+            ).addTo(map_ff6cf83fe2c9dd1ba87657c55f7a35fb);
+        
+    
+            var icon_1a19e7a67939b3acbe401f3b176d1c56 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e25118ea66347f79db888f2df72d0992 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0fbca41281ac8a4fada0f571b5c8c90e = $(`<div id="html_0fbca41281ac8a4fada0f571b5c8c90e" style="width: 100.0%; height: 100.0%;">ANTÔNIA DE QUEIRÓS - B/C</div>`)[0];
+                popup_e25118ea66347f79db888f2df72d0992.setContent(html_0fbca41281ac8a4fada0f571b5c8c90e);
+            
+        
+
+        marker_b7d75574f4b60a514f626eb218f41f17.bindPopup(popup_e25118ea66347f79db888f2df72d0992)
+        ;
+
+        
+    
+    
+            marker_b7d75574f4b60a514f626eb218f41f17.bindTooltip(
+                `<div>
+                     Parada de ônibus
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b7d75574f4b60a514f626eb218f41f17.setIcon(icon_1a19e7a67939b3acbe401f3b176d1c56);
+            
+    
+            var marker_0064b169cdc596859796be77ba974fe2 = L.marker(
+                [-23.548174, -46.649565],
+                {
+}
+            ).addTo(map_ff6cf83fe2c9dd1ba87657c55f7a35fb);
+        
+    
+            var icon_9d2cb192dc4a5f6e002633cb5e30d8aa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1ea086313657ea12e7bad2b746a3e2d0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cbd6850135b1c0f93a7920baf44ce636 = $(`<div id="html_cbd6850135b1c0f93a7920baf44ce636" style="width: 100.0%; height: 100.0%;">CAIO PRADO B/C</div>`)[0];
+                popup_1ea086313657ea12e7bad2b746a3e2d0.setContent(html_cbd6850135b1c0f93a7920baf44ce636);
+            
+        
+
+        marker_0064b169cdc596859796be77ba974fe2.bindPopup(popup_1ea086313657ea12e7bad2b746a3e2d0)
+        ;
+
+        
+    
+    
+            marker_0064b169cdc596859796be77ba974fe2.bindTooltip(
+                `<div>
+                     Parada de ônibus
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0064b169cdc596859796be77ba974fe2.setIcon(icon_9d2cb192dc4a5f6e002633cb5e30d8aa);
+            
+    
+            var marker_debd0a07280d6c2fe773d0cd0e1e2ce2 = L.marker(
+                [-23.532629, -46.657465],
+                {
+}
+            ).addTo(map_ff6cf83fe2c9dd1ba87657c55f7a35fb);
+        
+    
+            var icon_a85ae3b80568f4945c3b7c03dfe0bb57 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2fee0f9e096f5254116e4348cc4176ed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b0ecc31138b15f8f69a962d016591ad = $(`<div id="html_7b0ecc31138b15f8f69a962d016591ad" style="width: 100.0%; height: 100.0%;">ROSA E SILVA C/B</div>`)[0];
+                popup_2fee0f9e096f5254116e4348cc4176ed.setContent(html_7b0ecc31138b15f8f69a962d016591ad);
+            
+        
+
+        marker_debd0a07280d6c2fe773d0cd0e1e2ce2.bindPopup(popup_2fee0f9e096f5254116e4348cc4176ed)
+        ;
+
+        
+    
+    
+            marker_debd0a07280d6c2fe773d0cd0e1e2ce2.bindTooltip(
+                `<div>
+                     Parada de ônibus
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_debd0a07280d6c2fe773d0cd0e1e2ce2.setIcon(icon_a85ae3b80568f4945c3b7c03dfe0bb57);
+            
+    
+            var marker_7559ed3f9474a776d09fb700507ae729 = L.marker(
+                [-23.536498, -46.650579],
+                {
+}
+            ).addTo(map_ff6cf83fe2c9dd1ba87657c55f7a35fb);
+        
+    
+            var icon_aa120e0a2f0f7960f61fe9afc1795fa8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4bc93e7ef2b34c4e5744b825ce46e878 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b8416b0b534178da8356817c23263e5 = $(`<div id="html_7b8416b0b534178da8356817c23263e5" style="width: 100.0%; height: 100.0%;">NOTHMANN C/B</div>`)[0];
+                popup_4bc93e7ef2b34c4e5744b825ce46e878.setContent(html_7b8416b0b534178da8356817c23263e5);
+            
+        
+
+        marker_7559ed3f9474a776d09fb700507ae729.bindPopup(popup_4bc93e7ef2b34c4e5744b825ce46e878)
+        ;
+
+        
+    
+    
+            marker_7559ed3f9474a776d09fb700507ae729.bindTooltip(
+                `<div>
+                     Parada de ônibus
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7559ed3f9474a776d09fb700507ae729.setIcon(icon_aa120e0a2f0f7960f61fe9afc1795fa8);
+            
+    
+            var marker_9dacdf9e016d24a1d3274f3518517325 = L.marker(
+                [-23.534668500000002, -46.6537985],
+                {
+}
+            ).addTo(map_ff6cf83fe2c9dd1ba87657c55f7a35fb);
+        
+    
+            var icon_4f73298c0b00ab054dc79df4aad53a9c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_86de2ad0e4a16843bd4bba69043a7b94 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1f4e1f912d0e9dadc1e69559fa3a0203 = $(`<div id="html_1f4e1f912d0e9dadc1e69559fa3a0203" style="width: 100.0%; height: 100.0%;">Ônibus: 64702</div>`)[0];
+                popup_86de2ad0e4a16843bd4bba69043a7b94.setContent(html_1f4e1f912d0e9dadc1e69559fa3a0203);
+            
+        
+
+        marker_9dacdf9e016d24a1d3274f3518517325.bindPopup(popup_86de2ad0e4a16843bd4bba69043a7b94)
+        ;
+
+        
+    
+    
+            marker_9dacdf9e016d24a1d3274f3518517325.bindTooltip(
+                `<div>
+                     Ônibus em circulação
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9dacdf9e016d24a1d3274f3518517325.setIcon(icon_4f73298c0b00ab054dc79df4aad53a9c);
+            
+    
+            var marker_99780872d9499015c734e1f70f480a72 = L.marker(
+                [-23.640198500000004, -46.662048],
+                {
+}
+            ).addTo(map_ff6cf83fe2c9dd1ba87657c55f7a35fb);
+        
+    
+            var icon_a789fc218aaffdddf4a220582cd42aaa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9e20ff2f89169c4ee59a4e98b800b076 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5792339ab8cb073072c88833470798c4 = $(`<div id="html_5792339ab8cb073072c88833470798c4" style="width: 100.0%; height: 100.0%;">Ônibus: 64394</div>`)[0];
+                popup_9e20ff2f89169c4ee59a4e98b800b076.setContent(html_5792339ab8cb073072c88833470798c4);
+            
+        
+
+        marker_99780872d9499015c734e1f70f480a72.bindPopup(popup_9e20ff2f89169c4ee59a4e98b800b076)
+        ;
+
+        
+    
+    
+            marker_99780872d9499015c734e1f70f480a72.bindTooltip(
+                `<div>
+                     Ônibus em circulação
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_99780872d9499015c734e1f70f480a72.setIcon(icon_a789fc218aaffdddf4a220582cd42aaa);
+            
+    
+            var marker_ce119dfad1e81e2b938c82dbd687d0be = L.marker(
+                [-23.5629645, -46.654547750000006],
+                {
+}
+            ).addTo(map_ff6cf83fe2c9dd1ba87657c55f7a35fb);
+        
+    
+            var icon_59cb636d22123d0d0208a50dc751757b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dbe940015940e1ae84608f979775fca1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_edddbd1806d7478b29303139133b7b52 = $(`<div id="html_edddbd1806d7478b29303139133b7b52" style="width: 100.0%; height: 100.0%;">Ônibus: 64253</div>`)[0];
+                popup_dbe940015940e1ae84608f979775fca1.setContent(html_edddbd1806d7478b29303139133b7b52);
+            
+        
+
+        marker_ce119dfad1e81e2b938c82dbd687d0be.bindPopup(popup_dbe940015940e1ae84608f979775fca1)
+        ;
+
+        
+    
+    
+            marker_ce119dfad1e81e2b938c82dbd687d0be.bindTooltip(
+                `<div>
+                     Ônibus em circulação
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ce119dfad1e81e2b938c82dbd687d0be.setIcon(icon_59cb636d22123d0d0208a50dc751757b);
+            
+    
+            var marker_9b505a7fa0df34c08d1a947a153778a8 = L.marker(
+                [-23.5362345, -46.6808435],
+                {
+}
+            ).addTo(map_ff6cf83fe2c9dd1ba87657c55f7a35fb);
+        
+    
+            var icon_3d393f9b2b62b842619a42a3b4176fc7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_714a2e7a9a9c30b40c7e885c7dca2713 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_890c7c4a39e915e53363af728a372823 = $(`<div id="html_890c7c4a39e915e53363af728a372823" style="width: 100.0%; height: 100.0%;">Ônibus: 64905</div>`)[0];
+                popup_714a2e7a9a9c30b40c7e885c7dca2713.setContent(html_890c7c4a39e915e53363af728a372823);
+            
+        
+
+        marker_9b505a7fa0df34c08d1a947a153778a8.bindPopup(popup_714a2e7a9a9c30b40c7e885c7dca2713)
+        ;
+
+        
+    
+    
+            marker_9b505a7fa0df34c08d1a947a153778a8.bindTooltip(
+                `<div>
+                     Ônibus em circulação
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9b505a7fa0df34c08d1a947a153778a8.setIcon(icon_3d393f9b2b62b842619a42a3b4176fc7);
+            
+    
+            var marker_fc1a76411d81e231588caa75a37d7893 = L.marker(
+                [-23.608787999999997, -46.6377915],
+                {
+}
+            ).addTo(map_ff6cf83fe2c9dd1ba87657c55f7a35fb);
+        
+    
+            var icon_7618b44c096ef254493933c6dcf9c10f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_593fa8094a89efd45456a1871e995817 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7d8c2b800d89350ba00df6077790bc28 = $(`<div id="html_7d8c2b800d89350ba00df6077790bc28" style="width: 100.0%; height: 100.0%;">Ônibus: 64721</div>`)[0];
+                popup_593fa8094a89efd45456a1871e995817.setContent(html_7d8c2b800d89350ba00df6077790bc28);
+            
+        
+
+        marker_fc1a76411d81e231588caa75a37d7893.bindPopup(popup_593fa8094a89efd45456a1871e995817)
+        ;
+
+        
+    
+    
+            marker_fc1a76411d81e231588caa75a37d7893.bindTooltip(
+                `<div>
+                     Ônibus em circulação
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fc1a76411d81e231588caa75a37d7893.setIcon(icon_7618b44c096ef254493933c6dcf9c10f);
+            
+</script>
+</html>

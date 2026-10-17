@@ -1,3 +1,4 @@
+#baixar: requests, folium, python-dotenv
 
 import requests
 import folium
@@ -5,23 +6,23 @@ import folium
 import os
 from dotenv import load_dotenv
 
-# Carregar as variáveis do arquivo .env
+#variáveis do arquivo .env
 load_dotenv()
 
-# Obter o token da SPTrans
+#token da SPTrans
 TOKEN = os.getenv("SPTRANS_TOKEN")
 
-# Linha de ônibus escolhida
+#Linha de ônibus
 LINHA = "875A-10"
 
-# Endereço da API
+#API
 URL = "https://api.olhovivo.sptrans.com.br/v2.1"
 
-# Mantém a sessão autenticada nas consultas
+#sessão autenticada nas consultas
 sessao = requests.Session()
 
 
-# 1. Autenticar na API
+#Autenticação de API
 resposta = sessao.post(
     URL + "/Login/Autenticar",
     params={"token": TOKEN}
@@ -34,7 +35,7 @@ if resposta.text.lower() != "true":
 print("Autenticação realizada!")
 
 
-# 2. Buscar a linha de ônibus
+#Busca a linha de ônibus
 resposta = sessao.get(
     URL + "/Linha/Buscar",
     params={"termosBusca": LINHA}
@@ -42,7 +43,7 @@ resposta = sessao.get(
 linhas = resposta.json()
 print(linhas)
 
-# Encontrar a linha desejada
+#Encontra a linha
 codigo_linha = None
 
 for linha in linhas:
@@ -55,7 +56,7 @@ if codigo_linha is None:
     exit()
 
 
-# 3. Buscar as paradas da linha
+#Busca as paradas da linha
 resposta = sessao.get(
     URL + "/Parada/BuscarParadasPorLinha",
     params={"codigoLinha": codigo_linha}
@@ -63,7 +64,7 @@ resposta = sessao.get(
 paradas = resposta.json()
 
 
-# 4. Buscar a posição dos ônibus em circulação
+#Busca a posição dos ônibus em circulação
 resposta = sessao.get(
     URL + "/Posicao/Linha",
     params={"codigoLinha": codigo_linha}
@@ -72,7 +73,7 @@ dados = resposta.json()
 onibus = dados.get("vs", [])
 
 
-# 5. Criar o mapa
+# mapa
 latitudes = [p["py"] for p in paradas if p["py"]]
 longitudes = [p["px"] for p in paradas if p["px"]]
 
@@ -85,7 +86,7 @@ else:
 mapa = folium.Map(location=centro, zoom_start=13)
 
 
-# Adicionar as paradas em azul
+#paradas em azul
 for parada in paradas:
     if parada["py"] and parada["px"]:
         folium.Marker(
@@ -96,7 +97,7 @@ for parada in paradas:
         ).add_to(mapa)
 
 
-# Adicionar os ônibus em vermelho
+#ônibus em vermelho
 for veiculo in onibus:
     if veiculo["py"] and veiculo["px"]:
         folium.Marker(
@@ -107,7 +108,7 @@ for veiculo in onibus:
         ).add_to(mapa)
 
 
-# 6. Salvar o mapa
+#mapa salvo
 mapa.save("mapa.html")
 
 print("Paradas encontradas:", len(paradas))

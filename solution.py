@@ -83,7 +83,19 @@ if latitudes:
 else:
     centro = [-23.5505, -46.6333]
 
-mapa = folium.Map(location=centro, zoom_start=13)
+
+mapa = folium.Map(
+    location=centro,
+    zoom_start=13,
+    tiles=None
+)
+
+#mapa de fundo alternativo. Não estava funcionando (erro 403 E outro que precisava da chave de API)
+folium.TileLayer(
+    tiles="https://tile.openstreetmap.de/{z}/{x}/{y}.png",
+    attr="© OpenStreetMap contributors",
+    name="OpenStreetMap DE"
+).add_to(mapa)
 
 
 #paradas em azul
